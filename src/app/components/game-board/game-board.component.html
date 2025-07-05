@@ -1,0 +1,14 @@
+<div class="game-board">
+    <h1>Treasure Hunt</h1>
+    <h2>Score: {{ score }}</h2>
+    <div class="chest-grid">
+        <app-treasure-chest
+                *ngFor="let treasure of treasures"
+                [treasure]="treasure"
+                (treasureFound)="onTreasureFound($event)"
+        ></app-treasure-chest>
+    </div>
+    <p *ngIf="score === treasures.length * 10" class="win-message">
+        You found all the treasures! Great job!
+    </p>
+</div>

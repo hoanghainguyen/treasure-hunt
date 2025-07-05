@@ -1,0 +1,6 @@
+<div class="chest" [ngClass]="{'found': treasure.found}" (click)="onClick()">
+    <img
+            [src]="treasure.found ? '../../assets/treasure-open.png' : '../../assets/treasure-closed.png'"
+            alt="Treasure Chest"
+    />
+</div>

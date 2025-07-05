@@ -1,0 +1,49 @@
+.chest {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid transparent;
+    border-image: linear-gradient(to right, #ff6f61, #4a90e2) 1;
+    border-radius: 10px;
+    padding: 5px;
+    background: #fff3e0;
+    position: relative;
+    overflow: hidden;
+}
+
+.chest:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+    animation: sparkle 1.5s infinite;
+}
+
+.chest:active:not(.found) {
+    transform: scale(0.95);
+    animation: bounce 0.3s ease;
+}
+
+.chest.found {
+    opacity: 0.8;
+    cursor: default;
+    border-image: linear-gradient(to right, #28a745, #28a745) 1;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+    animation: none;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+@keyframes sparkle {
+    0% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.7); }
+    50% { box-shadow: 0 0 20px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 255, 255, 0.5); }
+    100% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.7); }
+}
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
