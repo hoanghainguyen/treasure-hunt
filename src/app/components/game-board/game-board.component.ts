@@ -18,9 +18,22 @@ export class GameBoardComponent {
   score = 0;
   treasures: Treasure[] = [
     { id: 1, found: false },
-    { id: 2, found: false },
+    { id: 2, found: true },
     { id: 3, found: false },
-    { id: 4, found: false }
+    { id: 4, found: false },
+    { id: 5, found: true },
+    { id: 6, found: true },
+    { id: 7, found: false },
+    { id: 8, found: false } ,
+    { id: 9, found: false } ,
+    { id: 10, found: false } ,
+    { id: 11, found: false } ,
+    { id: 12, found: false } ,
+    { id: 13, found: true } ,
+    { id: 14, found: false } ,
+    { id: 15, found: false } ,
+
+
   ];
 
   onTreasureFound(treasureId: number): void {
